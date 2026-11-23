@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}NTC BSIT Student Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="brand-group">
+            <img src="{% static 'portal/images/NTCLOGO.jpg' %}" alt="NTC BSIT Department Portal logo" width="64" height="64">
+            <span class="brand-title">NTC BSIT Student Portal</span>
+        </div>
+        {% include 'portal/partials/navbar.html' %}
+    </header>
+
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>NTC BSIT Student Portal | Python Programming 2 (PC15)</p>
+    </footer>
+</body>
+</html>
